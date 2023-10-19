@@ -5,6 +5,7 @@ class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите пример: ");
         String arithExample = scanner.nextLine();
+        System.out.println("Ответ: ");
         printResult(arithExample);
     }
     public static void printResult(String arithExample) throws Exception {
@@ -32,6 +33,7 @@ class Main {
             romanNumber = false;
             first = Integer.parseInt(firstAndSecond[0]);
             second = Integer.parseInt(firstAndSecond[1]);
+
         } else throw new Exception("Вы ввели значения разного формата");
 
         if (first > 10 || second > 10) throw new Exception("Введите число от 1 до 10");
