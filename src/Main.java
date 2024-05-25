@@ -6,9 +6,9 @@ class Main {
         System.out.println("Введите пример: ");
         String arithExample = scanner.nextLine();
         System.out.println("Ответ: ");
-        printResult(arithExample);
+        calc(arithExample);
     }
-    public static void printResult(String arithExample) throws Exception {
+    public static void calc(String arithExample) throws Exception {
         int total;
         boolean romanNumber;
         String result;
@@ -38,7 +38,7 @@ class Main {
 
         if (first > 10 || second > 10) throw new Exception("Введите число от 1 до 10");
 
-        total = calc(first, second, operator);
+        total = calculate(first, second, operator);
 
         if ((romanNumber) && (total <= 0)) {
             System.out.println("Римские числа должны быть больше 0 и сумма выражения должна быть положительной");
@@ -63,7 +63,7 @@ class Main {
             return "*";
         } else return null;
     }
-    public static int calc (int a, int b, String c) {
+    public static int calculate (int a, int b, String c) {
         if(c.equals("+"))
             return a + b;
         if(c.equals("-"))
